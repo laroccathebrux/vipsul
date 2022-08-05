@@ -15,6 +15,7 @@ ACCKEY  = config["AZURE"]["ACCKEY"]
 CONTAINER = config["AZURE"]["CONTAINER"]
 TOKENESTRUTURA = config["API"]["TOKENESTRUTURA"]
 TOKENUSUARIO = config["API"]["TOKENUSUARIO"]
+PAINEL = config["API"]["PAINEL"]
 
 blob_service_client = BlobServiceClient.from_connection_string(ACCKEY)
 container_client = blob_service_client.get_container_client(CONTAINER)
@@ -27,7 +28,7 @@ data = {
        "tokenUsuario":TOKENUSUARIO,
        "dataInicial":"2022-01-01",
        "dataFinal":str(today),
-       "painelId":"14017"
+       "painelId":PAINEL
     }
 
 r = requests.post(url = API_ENDPOINT, json = data)
