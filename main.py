@@ -13,6 +13,8 @@ config.read("credentials.ini")
 
 ACCKEY  = config["AZURE"]["ACCKEY"]
 CONTAINER = config["AZURE"]["CONTAINER"]
+TOKENESTRUTURA = config["API"]["TOKENESTRUTURA"]
+TOKENUSUARIO = config["API"]["TOKENUSUARIO"]
 
 blob_service_client = BlobServiceClient.from_connection_string(ACCKEY)
 container_client = blob_service_client.get_container_client(CONTAINER)
@@ -21,8 +23,8 @@ API_ENDPOINT = "https://app.neocrm.com.br/producao-painel-integration"
 today = date.today()
 
 data = { 
-       "tokenEstrutura":"f9d1b75c-fd66-4367-baa8-e09cbb1e478a",
-       "tokenUsuario":"282159ff-bcc4-4cfe-b441-d0dfe79c1848",
+       "tokenEstrutura":TOKENESTRUTURA,
+       "tokenUsuario":TOKENUSUARIO,
        "dataInicial":"2022-01-01",
        "dataFinal":str(today),
        "painelId":"14017"
