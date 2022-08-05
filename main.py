@@ -1,6 +1,8 @@
 import requests
 import json
 from datetime import date
+import configparser
+from azure.storage.blob import BlobServiceClient
 
 def getJson(obj):
     text = json.dumps(obj, sort_keys=True, indent=4)
