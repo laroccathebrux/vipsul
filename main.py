@@ -16,11 +16,11 @@ CONTAINER = config["AZURE"]["CONTAINER"]
 TOKENESTRUTURA = config["API"]["TOKENESTRUTURA"]
 TOKENUSUARIO = config["API"]["TOKENUSUARIO"]
 PAINEL = config["API"]["PAINEL"]
+API_ENDPOINT = config["API"]["API_ENDPOINT"]
 
 blob_service_client = BlobServiceClient.from_connection_string(ACCKEY)
 container_client = blob_service_client.get_container_client(CONTAINER)
 
-API_ENDPOINT = "https://app.neocrm.com.br/producao-painel-integration"
 today = date.today()
 
 data = { 
