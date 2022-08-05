@@ -29,11 +29,6 @@ data = {
     }
 
 r = requests.post(url = API_ENDPOINT, json = data)
-#print(r.text)
-
-f = open('data.csv', "w")
-f.write(r.text)
-f.close()
 
 blob_client = container_client.get_blob_client("API_DATA.csv")
 blob_client.upload_blob(r.text, blob_type="BlockBlob", overwrite=True)
