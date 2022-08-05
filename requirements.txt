@@ -1,6 +1,5 @@
 azure-core==1.25.0
 azure-storage-blob==12.13.1
-certifi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_884c889c-96af-444f-bd6d-daddb5e9a462ykj3l5n_/croots/recipe/certifi_1655968814730/work/certifi
 cffi==1.15.1
 charset-normalizer==2.1.0
 cryptography==37.0.4
