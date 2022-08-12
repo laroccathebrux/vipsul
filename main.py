@@ -33,6 +33,7 @@ data = {
 
 r = requests.post(url = API_ENDPOINT, json = data)
 
+#Save data into blob storage
 blob_client = container_client.get_blob_client("API_DATA.csv")
 blob_client.upload_blob(r.text, blob_type="BlockBlob", overwrite=True)
 
